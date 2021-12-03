@@ -1,10 +1,9 @@
 export default function PokeItem({
 	pokemon,
+	filteredPokemon,
 	url_image,
 	id,
-	_id,
 	type_1,
-	selectedType,
 }) {
 	return (
 		<section className="pokemonCard">

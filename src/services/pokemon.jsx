@@ -12,3 +12,11 @@ export const fetchTypes = async () => {
 	const allTypes = rawTypes.map((type) => type.type);
 	return allTypes;
 };
+
+export const fetchFilteredPokemon = async (selectedType) => {
+	const res = await fetch(
+		`https://pokedex-alchemy.herokuapp.com/api/pokedex?type=${selectedType}`
+	);
+	const filteredPokemon = await res.json();
+	return filteredPokemon.results;
+};
