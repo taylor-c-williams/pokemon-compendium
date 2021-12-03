@@ -17,7 +17,13 @@ export default function Compendium() {
 	return (
 		<div>
 			hyi
-			<PokeList pokedex={pokedex} />
+			{loading ? (
+				<section className="loading">
+					<h2> Loading ... </h2>
+				</section>
+			) : (
+				<PokeList pokedex={pokedex} />
+			)}
 		</div>
 	);
 }
