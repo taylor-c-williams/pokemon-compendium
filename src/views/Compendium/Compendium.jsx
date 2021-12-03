@@ -5,14 +5,14 @@ import {
 	fetchFilteredPokemon,
 } from '../../services/pokemon';
 import PokeList from '../../components/PokeList/PokeList';
-import PokemonList from '../../components/PokeList/PokemonList';
+import Filter from '../../components/Filter/Filter';
 
 export default function Compendium() {
 	// Set State
 	const [pokedex, setPokedex] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [allTypes, setAllTypes] = useState([]);
-	const [selectedType, setSelectedType] = useState('normal');
+	const [selectedType, setSelectedType] = useState('');
 
 	// Declare Fetch Util Functions
 	async function getPokemon() {
@@ -24,6 +24,18 @@ export default function Compendium() {
 	async function getAllTypes() {
 		const types = await fetchTypes();
 		setAllTypes(types);
+	}
+
+	async function getFilteredPokemon() {
+		setLoading(true);
+		if (!selectedType || selectedType === 'all') {
+			const pokemonList = await fetchPokemon();
+			setPokedex(pokemonList);
+		} else {
+			const filteredPokemon = await fetchFilteredPokemon(selectedType);
+			setPokedex(filteredPokemon);
+		}
+		setLoading(false);
 	}
 
 	// async function getSelectedType() {
@@ -50,21 +62,6 @@ export default function Compendium() {
 	// }, [selectedType]);
 
 	useEffect(() => {
-		if (!selectedType) return;
-
-		async function getFilteredPokemon() {
-			setLoading(true);
-			if (selectedType === 'all') {
-				const pokemonList = await fetchPokemon();
-				setPokedex(pokemonList);
-			} else {
-				const filteredPokemon = await fetchFilteredPokemon(selectedType);
-				setPokedex(filteredPokemon);
-			}
-
-			setLoading(false);
-		}
-
 		getFilteredPokemon();
 	}, [selectedType]);
 
@@ -76,7 +73,14 @@ export default function Compendium() {
 					<h2> Loading ... </h2>
 				</section>
 			) : (
-				<PokeList pokedex={pokedex} selectedType={selectedType} />
+				<section className="components">
+					<Filter
+						allTypes={allTypes}
+						selectedType={selectedType}
+						handleChange={setSelectedType}
+					/>
+					<PokeList pokedex={pokedex} selectedType={selectedType} />
+				</section>
 			)}
 		</div>
 	);
