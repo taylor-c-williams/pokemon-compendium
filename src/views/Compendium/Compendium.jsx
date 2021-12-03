@@ -9,7 +9,6 @@ export default function Compendium() {
 	useEffect(() => {
 		const getPokemon = async () => {
 			const pokemonList = await fetchPokemon();
-			console.log(pokemonList);
 			setPokedex(pokemonList);
 			setLoading(false);
 		};
