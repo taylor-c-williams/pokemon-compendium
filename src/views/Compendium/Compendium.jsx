@@ -3,6 +3,7 @@ import {
 	fetchPokemon,
 	fetchTypes,
 	fetchFilteredPokemon,
+	fetchSortOrder,
 } from '../../services/pokemon';
 import PokeList from '../../components/PokeList/PokeList';
 import Filter from '../../components/Filter/Filter';
@@ -13,8 +14,9 @@ export default function Compendium() {
 	const [loading, setLoading] = useState(true);
 	const [allTypes, setAllTypes] = useState([]);
 	const [selectedType, setSelectedType] = useState('');
+	const [sortOrder, setSortOrder] = useState('asc');
 
-	// Declare Fetch Util Functions
+	// Declare on mount Fetch Util Functions
 	async function getPokemon() {
 		const pokemonList = await fetchPokemon();
 		setPokedex(pokemonList);
@@ -26,44 +28,32 @@ export default function Compendium() {
 		setAllTypes(types);
 	}
 
-	async function getFilteredPokemon() {
-		setLoading(true);
-		if (!selectedType || selectedType === 'all') {
-			const pokemonList = await fetchPokemon();
-			setPokedex(pokemonList);
-		} else {
-			const filteredPokemon = await fetchFilteredPokemon(selectedType);
-			setPokedex(filteredPokemon);
-		}
-		setLoading(false);
-	}
-
-	// async function getSelectedType() {
-	// 	setLoading(true);
-	// 	if (selectedType) {
-	// 		const filteredPokemon = await fetchFilteredPokemon(selectedType);
-	// 		setPokedex(filteredPokemon);
-	// 	}
-	// 	setLoading(false);
-	// }
-
-	// const filteredPokemon = pokedex.filter(
-	// 	(pokemon) => pokemon.type_1 === selectedType
-	// );
-
-	// Life cycles
+	// Life cycles - On Mount
 	useEffect(() => {
 		getPokemon();
 		getAllTypes();
 	}, []);
 
-	// useEffect(() => {
-	// 	getSelectedType();
-	// }, [selectedType]);
-
+	// Type Change
 	useEffect(() => {
+		async function getFilteredPokemon() {
+			setLoading(true);
+			if (!selectedType || selectedType === 'all') {
+				const pokemonList = await fetchPokemon();
+				setPokedex(pokemonList);
+			} else {
+				const filteredPokemon = await fetchFilteredPokemon(selectedType);
+				setPokedex(filteredPokemon);
+			}
+			setLoading(false);
+		}
 		getFilteredPokemon();
 	}, [selectedType]);
+
+	// Sort Order
+	useEffect(() => {
+		fetchSortOrder();
+	}, [sortOrder]);
 
 	return (
 		<div>
@@ -78,6 +68,7 @@ export default function Compendium() {
 						allTypes={allTypes}
 						selectedType={selectedType}
 						handleChange={setSelectedType}
+						handleSort={setSortOrder}
 					/>
 					<PokeList pokedex={pokedex} selectedType={selectedType} />
 				</section>

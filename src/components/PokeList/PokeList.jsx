@@ -1,5 +1,4 @@
 import PokeItem from '../PokeItem/PokeItem';
-import PokemonList from './PokemonList';
 
 export default function PokeList({ pokedex }) {
 	// const filteredPokemon = pokedex.filter(
