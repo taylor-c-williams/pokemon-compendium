@@ -50,8 +50,6 @@ export default function Compendium() {
 		getFilteredPokemon();
 	}, [selectedType, sortOrder]);
 
-	console.log(sortOrder);
-
 	return (
 		<div>
 			hyi

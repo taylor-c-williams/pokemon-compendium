@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Sort component accurately 1`] = `
+Array [
+  <select
+    aria-label="sort"
+  >
+    <option
+      value="asc"
+    >
+      Ascending
+    </option>
+    <option
+      value="desc"
+    >
+      Descending
+    </option>
+  </select>,
+]
+`;
