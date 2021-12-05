@@ -36,18 +36,20 @@ export default function Compendium() {
 		async function getFilteredPokemon() {
 			setLoading(true);
 			if (!selectedType || selectedType === 'all') {
-				const pokemonList = await fetchPokemon();
+				const pokemonList = await fetchPokemon(sortOrder);
 				setPokedex(pokemonList);
 			} else {
-				const filteredPokemon = await fetchFilteredPokemon(selectedType);
+				const filteredPokemon = await fetchFilteredPokemon(
+					selectedType,
+					sortOrder
+				);
 				setPokedex(filteredPokemon);
 			}
 			setLoading(false);
 		}
 		getFilteredPokemon();
 	}, [selectedType, sortOrder]);
-	// whyyyyyEEEeeeeeeeee why whyyyyeee
-	//  ty for looking
+
 	console.log(sortOrder);
 
 	return (
