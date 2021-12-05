@@ -4,9 +4,10 @@ exports[`accurately renders the PokeList component 1`] = `
 Array [
   <div
     aria-label="pokemons!"
+    class="pokelist-body"
   >
     <section
-      class="pokemonCard"
+      class="pokeitem-body"
     >
       <img
         alt="bulbasaur"
@@ -31,7 +32,7 @@ Array [
       45
     </section>
     <section
-      class="pokemonCard"
+      class="pokeitem-body"
     >
       <img
         alt="ivysaur"
