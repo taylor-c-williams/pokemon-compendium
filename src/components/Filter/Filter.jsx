@@ -5,6 +5,7 @@ export default function Filter({ allTypes, selectedType, handleChange }) {
 		<div>
 			{/* Type Selector */}
 			<select
+				aria-label="typeFilter"
 				value={selectedType}
 				onChange={(e) => handleChange(e.target.value)}
 			>

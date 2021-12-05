@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should properly render the Filter component 1`] = `
+Array [
+  <select
+    aria-label="typeFilter"
+  >
+    <option
+      value="all"
+    >
+      All
+    </option>
+    <option
+      value="normal"
+    >
+      normal
+    </option>
+    <option
+      value="bug"
+    >
+      bug
+    </option>
+    <option
+      value="water"
+    >
+      water
+    </option>
+    <option
+      value="electric"
+    >
+      electric
+    </option>
+    <option
+      value="ghost"
+    >
+      ghost
+    </option>
+  </select>,
+]
+`;
