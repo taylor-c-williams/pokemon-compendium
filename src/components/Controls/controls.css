@@ -1,0 +1,20 @@
+.controls-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+select {
+	margin: 35px;
+	width: 200px;
+	height: auto;
+	padding: 15px;
+	font-size: 1.5em;
+	font-family: 'Yuji Syuku', serif;
+	text-transform: capitalize;
+	border: none;
+}
+
+select :focus {
+	border-style: none;
+}

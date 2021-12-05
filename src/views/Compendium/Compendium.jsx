@@ -5,8 +5,8 @@ import {
 	fetchFilteredPokemon,
 } from '../../services/utils';
 import PokeList from '../../components/PokeList/PokeList';
-import Filter from '../../components/Filter/Filter';
-import Sort from '../../components/Sort/Sort';
+import Controls from '../../components/Controls/Controls';
+import './compendium.css';
 
 export default function Compendium() {
 	// Set State
@@ -51,20 +51,22 @@ export default function Compendium() {
 	}, [selectedType, sortOrder]);
 
 	return (
-		<div>
-			hyi
+		<div className="compendium-body">
+			<h1>Lil' Poke-Mane Compendium</h1>
 			{loading ? (
 				<section className="loading">
 					<h2> Loading ... </h2>
 				</section>
 			) : (
 				<section className="components">
-					<Filter
+					<Controls
 						allTypes={allTypes}
 						selectedType={selectedType}
-						handleChange={setSelectedType}
+						setSelectedType={setSelectedType}
+						sortOrder={sortOrder}
+						setSortOrder={setSortOrder}
 					/>
-					<Sort sortOrder={sortOrder} setSortOrder={setSortOrder} />
+
 					<PokeList pokedex={pokedex} selectedType={selectedType} />
 				</section>
 			)}

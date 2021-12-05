@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Yuji+Syuku&display=swap');
+/* 
+font-family: 'Praise', cursive;
+font-family: 'Yuji Syuku', serif; 
+*/
+html,
+body {
+	font-family: 'Yuji Syuku', serif;
+	margin: 50px;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+.compendium-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.compendium-body img {
+	height: 200px;
+}

@@ -1,13 +1,11 @@
-import React from 'react';
-
-export default function Filter({ allTypes, selectedType, handleChange }) {
+export default function Filter({ allTypes, selectedType, setSelectedType }) {
 	return (
-		<div>
+		<div className="filter-body">
 			{/* Type Selector */}
 			<select
 				aria-label="typeFilter"
 				value={selectedType}
-				onChange={(e) => handleChange(e.target.value)}
+				onChange={(e) => setSelectedType(e.target.value)}
 			>
 				<option key="all" value="all">
 					All
