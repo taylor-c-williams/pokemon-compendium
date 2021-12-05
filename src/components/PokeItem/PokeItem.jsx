@@ -1,9 +1,13 @@
 export default function PokeItem({
 	pokemon,
-	filteredPokemon,
 	url_image,
 	id,
 	type_1,
+	generation_id,
+	hp,
+	attack,
+	defense,
+	speed,
 }) {
 	return (
 		<section className="pokemonCard">
@@ -11,6 +15,10 @@ export default function PokeItem({
 			<h1> {pokemon} </h1>
 			Pokedex Number: {id}
 			Type: {type_1}
+			HP: {hp}
+			ATK: {attack}
+			DEF: {defense}
+			SPD: {speed}
 		</section>
 	);
 }
