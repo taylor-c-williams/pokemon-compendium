@@ -15,18 +15,9 @@ export const fetchTypes = async () => {
 	return allTypes;
 };
 
-export const fetchFilteredPokemon = async (selectedType) => {
+export const fetchFilteredPokemon = async (selectedType, sortOrder) => {
 	const res = await fetch(
-		`https://pokedex-alchemy.herokuapp.com/api/pokedex?type=${selectedType}&perPage=150`
-	);
-	const filteredPokemon = await res.json();
-	return filteredPokemon.results;
-};
-
-export const fetchSortOrder = async (sortOrder) => {
-	const res = await fetch(
-		`https://pokedex-alchemy.herokuapp.com/api/pokedex?perPage=150&sort=id&direction=${sortOrder}
-    `
+		`https://pokedex-alchemy.herokuapp.com/api/pokedex?type=${selectedType}&perPage=150&sort=pokemon&direction=${sortOrder}`
 	);
 	const filteredPokemon = await res.json();
 	return filteredPokemon.results;

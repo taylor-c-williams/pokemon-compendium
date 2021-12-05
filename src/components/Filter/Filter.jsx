@@ -1,12 +1,6 @@
 import React from 'react';
 
-export default function Filter({
-	allTypes,
-	selectedType,
-	sortOrder,
-	handleChange,
-	handleSort,
-}) {
+export default function Filter({ allTypes, selectedType, handleChange }) {
 	return (
 		<div>
 			{/* Type Selector */}
@@ -24,12 +18,6 @@ export default function Filter({
 						</option>
 					);
 				})}
-			</select>
-
-			{/* Sort Order */}
-			<select value={sortOrder} onChange={(e) => handleSort(e.target.value)}>
-				<option value="asc">Ascending</option>
-				<option value="desc">Descending</option>
 			</select>
 		</div>
 	);
