@@ -2,7 +2,7 @@ import PokeItem from '../PokeItem/PokeItem';
 
 export default function PokeList({ pokedex }) {
 	return (
-		<div>
+		<div aria-label="pokemons!">
 			{pokedex.map((pokemon) => (
 				<PokeItem {...pokemon} key={pokemon._id} />
 			))}
