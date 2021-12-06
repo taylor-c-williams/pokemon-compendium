@@ -1,5 +1,6 @@
-.filter-body {
+.sort-body {
 	background-image: url('../clouds.png');
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-position-x: right;
 }

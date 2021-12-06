@@ -1,7 +1,11 @@
+import './filter.css';
+
 export default function Filter({ allTypes, selectedType, setSelectedType }) {
 	return (
 		<div className="filter-body">
 			{/* Type Selector */}
+			<section className="title">Filter by Type:</section>
+			<br />
 			<select
 				aria-label="typeFilter"
 				value={selectedType}

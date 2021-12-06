@@ -16,6 +16,7 @@ export default function Controls({
 				selectedType={selectedType}
 				setSelectedType={setSelectedType}
 			/>
+
 			<Sort sortOrder={sortOrder} setSortOrder={setSortOrder} />
 		</div>
 	);

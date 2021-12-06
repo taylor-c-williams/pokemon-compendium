@@ -1,6 +1,10 @@
+import './sort.css';
+
 export default function Sort({ sortOrder, setSortOrder }) {
 	return (
-		<div>
+		<div className="sort-body">
+			<section className="title">Sort By Pokedex Order:</section>
+			<br />
 			<select
 				aria-label="sort"
 				value={sortOrder}
