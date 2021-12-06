@@ -1,16 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Praise&family=Yuji+Syuku&display=swap');
-/* 
-font-family: 'Praise', cursive;
-font-family: 'Yuji Syuku', serif; 
-*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
 html,
 body {
-	font-family: 'Yuji Syuku', serif;
+	font-family: 'DM Mono', monospace;
+	letter-spacing: 0.25em;
 	margin: 50px;
+	margin-top: 0px;
+}
+
+.loading {
+	font-size: 3em;
+	font-family: 'Modak', cursive;
+	color: rgba(226, 190, 47, 1);
+	font-weight: 10;
+	text-shadow: -5px -5px white;
+	text-align: center;
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 9em;
+	font-family: 'Modak', cursive;
+	color: white;
+	font-weight: 100;
+	text-shadow: -5px -5px rgba(226, 190, 47, 1);
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin: 0;
+	text-transform: capitalize;
+	text-align: center;
+	letter-spacing: 0.35em;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.1em;
+	letter-spacing: 0.35em;
+}
+
+select {
+	margin: 35px;
+	margin-top: 20px;
+	width: 200px;
+	height: auto;
+	padding: 15px;
+	font-size: 1.5em;
+	font-family: 'DM Mono', monospace;
+	text-transform: capitalize;
+	border: none;
+}
+
+select:focus {
+	outline: none;
 }
 
 .compendium-body {
@@ -18,8 +62,4 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-.compendium-body img {
-	height: 200px;
 }

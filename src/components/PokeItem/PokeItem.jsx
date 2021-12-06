@@ -13,13 +13,16 @@ export default function PokeItem({
 	return (
 		<section className="pokeitem-body">
 			<img src={url_image} alt={pokemon} />
-			<h1> {pokemon} </h1>
-			Pokedex Number: {id}
-			Type: {type_1}
-			HP: {hp}
-			ATK: {attack}
-			DEF: {defense}
-			SPD: {speed}
+			<h2> {pokemon} </h2>
+			<h3>Pokedex No. {id}</h3>
+			{type_1}-type
+			<p />
+			<section className="stats">
+				<span>HP: {hp}</span>
+				<span>ATK: {attack}</span>
+				<span>DEF: {defense}</span>
+				<span>SPD: {speed}</span>
+			</section>
 		</section>
 	);
 }

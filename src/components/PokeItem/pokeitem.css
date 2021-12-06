@@ -3,5 +3,26 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 20px;
+	padding: 50px;
+	font-style: italic;
+	font-weight: 50;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 300px;
+	margin: 15px;
+}
+
+.stats {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 15px;
+	margin-top: 0px;
+}
+
+p {
+	margin: 10px;
+}
+
+img {
+	height: 300px;
 }

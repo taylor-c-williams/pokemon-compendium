@@ -52,7 +52,10 @@ export default function Compendium() {
 
 	return (
 		<div className="compendium-body">
-			<h1>Lil' Poke-Mane Compendium</h1>
+			{/* <h1>Pokemon Compendium</h1> */}
+			<section className="header">
+				<h1>Pokemon Compendium</h1>
+			</section>
 			{loading ? (
 				<section className="loading">
 					<h2> Loading ... </h2>
