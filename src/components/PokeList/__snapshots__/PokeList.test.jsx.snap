@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accurately renders the PokeList component 1`] = `
+Array [
+  <div
+    aria-label="pokemons!"
+    class="pokelist-body"
+  >
+    <section
+      class="pokeitem-body"
+    >
+      <img
+        alt="bulbasaur"
+        src="http=//assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+      />
+      <h2>
+         
+        bulbasaur
+         
+      </h2>
+      <h3>
+        Pokedex No. 
+        1
+      </h3>
+      grass
+      -type
+      <p />
+      <section
+        class="stats"
+      >
+        <span>
+          HP: 
+          45
+        </span>
+        <span>
+          ATK: 
+          49
+        </span>
+        <span>
+          DEF: 
+          49
+        </span>
+        <span>
+          SPD: 
+          45
+        </span>
+      </section>
+    </section>
+    <section
+      class="pokeitem-body"
+    >
+      <img
+        alt="ivysaur"
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+      />
+      <h2>
+         
+        ivysaur
+         
+      </h2>
+      <h3>
+        Pokedex No. 
+        2
+      </h3>
+      grass
+      -type
+      <p />
+      <section
+        class="stats"
+      >
+        <span>
+          HP: 
+          60
+        </span>
+        <span>
+          ATK: 
+          62
+        </span>
+        <span>
+          DEF: 
+          63
+        </span>
+        <span>
+          SPD: 
+          60
+        </span>
+      </section>
+    </section>
+    ;
+  </div>,
+]
+`;

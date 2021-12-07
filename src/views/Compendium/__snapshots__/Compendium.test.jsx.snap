@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accurately renders the Compendium view 1`] = `
+Array [
+  <h2>
+     Loading ... 
+  </h2>,
+]
+`;
